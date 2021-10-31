@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { useRoutes, RouteObject } from "react-router-dom";
+import routes from "utils/router/routes";
+import AppLayout from "layout/AppLayout";
+const App: React.FC = (): JSX.Element => {
+  const mainRoutes: RouteObject = {
+    path: "/",
+    element: <AppLayout />,
+    children: routes,
+  };
+  const router_view = useRoutes([mainRoutes]);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  return <Suspense fallback={<p>loading</p>}>{router_view}</Suspense>;
+};
 
 export default App;
