@@ -1,0 +1,15 @@
+// App module keywords
+export const TOGGLE_SIDEBAR = "TOGGLE_SIDEBAR";
+export const TOGGLE_DIALOG = "TOGGLE_DIALOG";
+export const TOGGLE_NOTIFICATION = "TOGGLE_NOTIFICATION";
+export const LOADING_STARTED = "LOADING_STARTED";
+export const LOADING_DONE = "LOADING_DONE";
+
+// Store
+
+export const SET_CART = "SET_CART";
+export const ADD_TO_CART ="ADD_TO_CART";
+export const ADD_TO_FAVORITES ="ADD_TO_FAVORITES";
+export const REMOVE_FROM_FAVORITES ="REMOVE_FROM_FAVORITES";
+export const REMOVE_FROM_CART ="REMOVE_FROM_CART";
+export const SET_SELECTED_ITEM = "SET_VIEW_ITEM";
